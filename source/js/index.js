@@ -6,10 +6,8 @@
 (function ($) {
     "use strict";
 
-    $(document).ready(function(){
-
+    $(function(){
         $(".post-content").fitVids();
-
     });
 
 }(jQuery));

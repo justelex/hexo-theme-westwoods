@@ -1,9 +1,32 @@
-<header class="site-head" <% if (theme.cover) { %> style="background-image: url(<%- theme.cover %>)" <% } %>>
-    <div class="vertical">
-        <div class="site-head-content inner">
-            <% if (theme.logo) { %> <a class="blog-logo" href="<%- config.root %>"><img src="<%- theme.logo %>" alt="Blog Logo"/></a> <% } %>
-            <h1 class="blog-title"><%- config.title %></h1>
-            <h2 class="blog-description"><%- config.subtitle %></h2>
-        </div>
+<header class="site-head"
+    <% if (config.cover) { %>
+        style="background-image: url(<%- config.cover %>)"
+    <% } %>
+>
+    <div class="site-head-content inner">
+        <% if (config.logo) { %>
+            <a class="blog-logo" href="<%- config.root %>">
+                <img src="<%- config.logo %>" alt="<%- config.title %> Logo"/>
+            </a>
+        <% } %>
+        <h1 class="blog-title">
+            <%- config.title %>
+        </h1>
+        <h2 class="blog-description">
+            <%- config.subtitle %>
+        </h2>
     </div>
+
 </header>
+
+<% if (config.menu){ %>
+    <nav id="main-nav">
+        <ul>
+            <% for (var i in config.menu){ %>
+                <li>
+                    <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+                </li>
+            <% } %>
+        </ul>
+    </nav>
+<% } %>
