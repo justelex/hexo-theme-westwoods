@@ -3,5 +3,4 @@
 - Das normale PageTemplate sieht glaube ich noch etwas kacke aus
 - Anpassungen für Mobile
 - HeaderBild / Fancy Canvas Animation
-- Logo
 - ...
