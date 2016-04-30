@@ -393,14 +393,17 @@ margin on the iframe, cause it breaks stuff. */
     box-shadow: #fff 0 0 0 5px;
 }
 
-.site-head canvas {
+.site-head .header-bg {
     position: absolute;
-    top: 0;
-    right: 50%;
-    margin-right: -50%;
     width: 100%;
-    min-width: 900px;
     min-height: 100%;
+    top: 0;
+    left: 50%;
+    margin-left: -50%;
+}
+
+.site-head canvas.header-bg {
+    min-width: 900px;
 }
 
 #main-nav {

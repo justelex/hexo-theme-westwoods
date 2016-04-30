@@ -14,13 +14,13 @@
                     <% if (post.excerpt){ %>
                         <%- post.excerpt %>
                     <% } else { %>
-                        <%- post.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 220) %>
+                        <%- post.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 220) %>...
                     <% } %>
                 </p>
                 <% if (config.excerpt_link) { %>
                     <p>
                         <a href="<%- config.root %><%- post.path %>" class="excerpt-link">
-                            <%= config.excerpt_link %>...
+                            <%= config.excerpt_link %>
                         </a>
                     </p>
                 <% } %>

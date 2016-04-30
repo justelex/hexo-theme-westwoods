@@ -373,6 +373,7 @@
         });
 
         var mousePos = new Point(canvas.width  / 2, canvas.height / 2);
+        var lastMouseMove = new Date();
         // give the browsers some time
         setTimeout(function () {
             canvas.parentNode.addEventListener("mousemove", function(event) {
@@ -384,22 +385,26 @@
                     (browsersMousPos.y - topLeft.y) * (canvas.height / canvas.clientHeight)
                 );
                 mousePos = canvasMousePos;
+                lastMouseMove = new Date();
             });
         }, 600)
 
         var draw = function() {
             requestAnimationFrame(function() {
+                console.log(lastMouseMove.getTime(), Date.now() - 200);
 
-                animateGrid(grid, {
-                    mousePos: mousePos
-                });
+                if (lastMouseMove.getTime() > Date.now() - 1500) {
+                    animateGrid(grid, {
+                        mousePos: mousePos
+                    });
 
-                drawGrid(grid, {
-                    //baseColor: new Color(250, 80, 25),
-                    baseColor: new Color(25, 80, 250),
-                    borderColor: new Color(18, 31, 45),
-                    baseColorOpacity: 0.4
-                });
+                    drawGrid(grid, {
+                        //baseColor: new Color(250, 80, 25),
+                        baseColor: new Color(25, 80, 250),
+                        borderColor: new Color(18, 31, 45),
+                        baseColorOpacity: 0.4
+                    });
+                }
 
                 draw();
             });
