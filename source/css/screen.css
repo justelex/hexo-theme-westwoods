@@ -124,26 +124,26 @@ h1 {
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 1.2em;
     letter-spacing: -1px;
     text-indent: -2px;
 }
 
 h3 {
-    font-size: 3.5rem;
+    font-size: 2.4rem;
 }
 
 h4 {
-    font-size: 3rem;
+    font-size: 1.8rem;
 }
 
 h5 {
-    font-size: 2.5rem;
+    font-size: 1.4rem;
 }
 
 h6 {
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 
 a {
@@ -475,7 +475,8 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
-.post {
+main > article,
+main > section {
     position: relative;
     width:80%;
     max-width: 700px;
@@ -903,23 +904,31 @@ pre .chunk {
     border-top: #EBF2F6 1px solid;
     font-size: 1.3rem;
     line-height: 1.7em;
-    color: #BBC7CC;
+    color: #141414;
     text-align: center;
     background: #F7FAFB;
 }
 
+.site-footer section {
+    display: inline-block;
+}
+
+.site-footer section:not(:last-child)::after {
+    content: "|";
+}
+
 .site-footer a {
-    color: #BBC7CC;
-    text-decoration: underline;
+    color: #3A4145;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .site-footer a:hover {
-    color: #50585D;
+    text-decoration: underline;;
 }
 
 .poweredby .icon-ghost {
     font-weight: 700;
-    text-decoration: none;
 }
 
 .poweredby .icon-ghost:hover {
@@ -1051,20 +1060,20 @@ pre .chunk {
     }
 
     h1 {
-        font-size: 4.8rem;
+        font-size: 4.4rem;
         text-indent: -2px;
     }
 
     h2 {
-        font-size: 3.8rem;
+        font-size: 3rem;
     }
 
     h3 {
-        font-size: 3.3rem;
+        font-size: 2.6rem;
     }
 
     h4 {
-        font-size: 2.8rem;
+        font-size: 2rem;
     }
 
 }
@@ -1111,18 +1120,22 @@ pre .chunk {
         padding: 4px;
     }
 
-    h1, h2 {
-        font-size: 3rem;
+    h1 {
+        font-size: 3.4rem;
         line-height: 1.1em;
         letter-spacing: -1px;
     }
 
-    h3 {
+    h2 {
         font-size: 2.8rem;
     }
 
+    h3 {
+        font-size: 2rem;
+    }
+
     h4 {
-        font-size: 2.3rem;
+        font-size: 1.8rem;
     }
 
     .post-template .post-header {
