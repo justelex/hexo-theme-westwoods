@@ -391,8 +391,6 @@
 
         var draw = function() {
             requestAnimationFrame(function() {
-                console.log(lastMouseMove.getTime(), Date.now() - 200);
-
                 if (lastMouseMove.getTime() > Date.now() - 1500) {
                     animateGrid(grid, {
                         mousePos: mousePos

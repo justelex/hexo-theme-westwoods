@@ -26,14 +26,14 @@
 
 </header>
 
-<% if (config.menu){ %>
-    <nav id="main-nav">
+<nav id="main-nav">
+    <% if (site.data.menu){ %>
         <ul>
-            <% for (var i in config.menu){ %>
+            <% for (var i in site.data.menu){ %>
                 <li>
-                    <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+                    <a class="main-nav-link" href="<%- site.data.menu[i] %>"><%= i %></a>
                 </li>
             <% } %>
         </ul>
-    </nav>
-<% } %>
+    <% } %>
+</nav>

@@ -378,21 +378,6 @@ margin on the iframe, cause it breaks stuff. */
     overflow: hidden;
 }
 
-.site-head:after {
-    content: '';
-    display: block;
-    width: 7px;
-    height: 7px;
-    margin-left: -5px;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    border: #e7eef2 1px solid;
-    border-radius: 100%;
-    background: #fff;
-    box-shadow: #fff 0 0 0 5px;
-}
-
 .site-head .header-bg {
     position: absolute;
     width: 100%;

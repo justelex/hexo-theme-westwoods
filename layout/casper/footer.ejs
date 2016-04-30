@@ -1,21 +1,28 @@
 <footer class="site-footer">
-  <% if (config.rss || config.feed) {  %>
-      <a class="subscribe icon-feed" href="<%= (config.rss || config.feed.path) %>"><span class="tooltip">Subscribe!</span></a>
-  <% } %>
+    <% if (config.rss || config.feed) {  %>
+        <a class="subscribe icon-feed" href="<%= (config.rss || config.feed.path) %>"><span class="tooltip">Subscribe!</span></a>
+    <% } %>
 
-  <div class="inner">
-     <section class="copyright">
-         &copy;
-         <%- (new Date()).getFullYear() %>
-         <a href="<%- config.root %>">
-             <%- config.title %>
-         </a>
-     </section>
-     <section class="poweredby">
-         Erstellt mit
-         <a class="icon-ghost" href="https://hexo.io/">
-             Hexo
-         </a>
-     </section>
-  </div>
+    <div class="inner">
+        <section class="copyright">
+            &copy;
+            <%- (new Date()).getFullYear() %>
+            <a href="<%- config.root %>">
+                <%- config.title %>
+            </a>
+        </section>
+        <section class="poweredby">
+            Erstellt mit
+            <a class="icon-ghost" href="https://hexo.io/">
+                Hexo
+            </a>
+        </section>
+        <% if (site.data.footer){ %>
+            <% for (var i in site.data.footer){ %>
+                <section class="<%- i %>">
+                    <%- site.data.footer[i] %>
+                </section>
+            <% } %>
+        <% } %>
+    </div>
 </footer>
