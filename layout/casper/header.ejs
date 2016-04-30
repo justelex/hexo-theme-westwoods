@@ -1,8 +1,13 @@
-<header class="site-head"
-    <% if (config.cover) { %>
-        style="background-image: url(<%- config.cover %>)"
+<header class="site-head">
+    <% if (page.image) { %>
+        <img src="<%- config.root %>images/<% post.image %>" alt="Banner Bild" />
+    <% } else { %>
+        <canvas width="1500" height="500" id="canvasHeader">
+            <img src="<%- config.root %>images/defaultBanner.jpg" />
+        </canvas>
+        <script type="text/javascript" async src="<%- config.root%>js/canvasHeader.js"></script>
     <% } %>
->
+
     <div class="site-head-content inner">
         <% if (config.logo) { %>
             <a class="blog-logo" href="<%- config.root %>">
@@ -13,7 +18,9 @@
             <%- config.title %>
         </h1>
         <h2 class="blog-description">
-            <%- config.subtitle %>
+            <span class="text-bg">
+                <%- config.subtitle %>
+            </span>
         </h2>
     </div>
 
