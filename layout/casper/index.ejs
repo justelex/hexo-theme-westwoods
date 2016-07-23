@@ -1,11 +1,5 @@
 
 <main class="content" role="main">
-    <% if (site.data.status){ %>
-        <article class="status">
-            <%- site.data.status%>
-        </article>
-    <% } %>
-
     <% page.posts.each(function(post) { %>
         <article class="post">
             <header class="post-header">
