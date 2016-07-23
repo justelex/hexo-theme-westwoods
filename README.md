@@ -1,10 +1,10 @@
 # Westwoods Hexo Theme
 
-Hexo theme for the Westwoodlabs website.
+Hexo theme for the [Westwoodlabs](https://westwoodlabs.de) website.
 
 The theme is a fork of the [Ghost Casper hexo port](https://github.com/kywk/hexo-theme-casper) from [Yu-Zhi Chen](https://github.com/kywk), which it self is a fork of the [Gost theme Casper](https://github.com/TryGhost/Casper).
 
-## Original Casper Hexo port Copyright & License
+## Original Casper to Hexo port Copyright & License
 
 The MIT License (MIT)
 
