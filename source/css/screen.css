@@ -19,13 +19,6 @@
  */
 
 /* ==========================================================================
-   0. Includes - Ground zero
-   ========================================================================== */
-
-@import url(normalize.css);
-
-
-/* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
    ========================================================================== */
 
@@ -389,6 +382,7 @@ margin on the iframe, cause it breaks stuff. */
 
 .site-head canvas.header-bg {
     min-width: 900px;
+    background: #4374d3;
 }
 
 #main-nav {
