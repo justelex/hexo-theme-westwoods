@@ -4,19 +4,19 @@
     <% } %>
 
     <div class="inner">
-        <section class="copyright">
+        <div class="copyright">
             &copy;
             <%- (new Date()).getFullYear() %>
             <a href="<%- config.root %>">
                 <%- config.title %>
             </a>
-        </section>
+        </div>
         
         <% if (site.data.footer){ %>
             <% for (var i in site.data.footer){ %>
-                <section class="<%- i %>">
+                <div class="<%- i %>">
                     <%- site.data.footer[i] %>
-                </section>
+                </div>
             <% } %>
         <% } %>
     </div>

@@ -1,5 +1,5 @@
 
-<main class="content" role="main">
+<main class="content">
     <% page.posts.each(function(post) { %>
         <article class="post">
             <header class="post-header">
@@ -9,7 +9,7 @@
                 </h2>
             </header>
 
-            <section class="post-excerpt">
+            <div class="post-excerpt">
                 <p>
                     <% if (post.excerpt){ %>
                         <%- post.excerpt %>
@@ -24,7 +24,7 @@
                         </a>
                     </p>
                 <% } %>
-            </section>
+            </div>
         </article>
     <% }); %>
 
