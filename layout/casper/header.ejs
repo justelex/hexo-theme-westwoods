@@ -1,8 +1,25 @@
 <header class="site-head">
+    <div style="position: absolute; top: 0px; z-index: 20; width: 100%;">
+        <nav id="main-top-nav">
+            <% if (site.data.external){ %>
+                <ul>
+                    <% for (var i in site.data.external){ %>
+                        <li>
+                            <a class="main-top-nav-link" href="<%- site.data.external[i] %>" target="_blank"><%= i %></a>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
+        </nav>
+        <div style="display: flex; flex-direction: row; justify-content: flex-end;">	
+            <img src="https://api.westwoodlabs.de/spaceapi/state/state.png" alt="Space Stauts" />
+        </div>
+    </div>
+
     <% if (page.image) { %>
         <img src="<%- config.root %>images/<%- page.image %>" alt="Banner Bild" class="header-bg"/>
     <% } else { %>
-        <canvas width="1500" height="500" id="canvasHeader" class="header-bg">
+        <canvas width="1500" height="800" id="canvasHeader" class="header-bg">
         </canvas>
     <% } %>
 
@@ -20,9 +37,6 @@
                 <%- config.subtitle %>
             </span>
         </h2>
-    </div>
-    <div>	
-        <img src="https://api.westwoodlabs.de/spaceapi/state/state.png" alt="Space Stauts" style="position:absolute; top:0px;right:0px;" />
     </div>
 </header>
 
