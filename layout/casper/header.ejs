@@ -5,7 +5,7 @@
                 <ul>
                     <% for (var i in site.data.external){ %>
                         <li>
-                            <a class="main-top-nav-link" href="<%- site.data.external[i] %>" target="_blank"><%= i %></a>
+                            <a class="main-top-nav-link" href="<%- site.data.external[i].url %>" target="_blank"><%= site.data.external[i].name %></a>
                         </li>
                     <% } %>
                 </ul>
